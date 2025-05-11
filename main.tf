@@ -27,6 +27,7 @@ resource "aws_dynamodb_table" "sensor_failures" {
   }
 }
 
+
 resource "aws_lambda_function" "sensor_handler" {
   function_name = "sensor_temperature_handler"
   role          = data.aws_iam_role.main_role.arn
