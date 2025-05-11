@@ -32,7 +32,8 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
-            - name: Test Lambda Invoke
+        
+      - name: Test Lambda Invoke
         run: |
           echo '[{"sensor_id":1,"value":1200,"location_id":"Zone-A"},{"sensor_id":2,"value":"nonsense","location_id":"Zone-B"},{"sensor_id":3,"value":0.4,"location_id":"Zone-C"},{"sensor_id":4,"value":500,"location_id":"Zone-D"},{"sensor_id":5,"value":5,"location_id":"Zone-E"},{"sensor_id":6,"value":25000,"location_id":"Zone-F"}]' > event.json
           
